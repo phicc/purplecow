@@ -2,11 +2,10 @@
 from typing import Optional
 
 from fastapi import FastAPI
-from pydantic import BaseModel
+from .schema import Item
+from .db import SessionLocal, db_eng
+from . import item_handling, db_models, schema
 
-class ItemModel(BaseModel):
-    id: str
-    name: str
 
 
 app = FastAPI()
