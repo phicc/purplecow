@@ -4,8 +4,7 @@ from typing import List
 from fastapi import FastAPI
 from fastapi.params import Depends
 from sqlalchemy.orm.session import Session
-from .schema import Item
-from . import item_handling_simple, db_models, schema
+from . import item_handling_simple, schema
 
 app = FastAPI()
 # When initializing the APP also create our storage

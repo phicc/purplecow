@@ -1,6 +1,6 @@
 # Simple data handling functionality expecting to update a list of dicts
 from typing import List
-from . import db_models, schema
+from . import schema
 
 def get_item(db: List, id: str):
     id_item = {}
