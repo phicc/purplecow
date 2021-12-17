@@ -16,10 +16,10 @@ def get_db_simple():
 
 @app.get("/items/{id}")
 def get_single_item(
-    id: str
+    id: str, db: Session = Depends(get_db_simple)
 ):
     # Retrieve the single item by id
-    return
+    return item_handling_simple.get_item(db=db, id=id)
 
 @app.get("/items")
 def get_items(db: Session = Depends(get_db_simple)):
